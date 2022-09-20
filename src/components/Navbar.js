@@ -12,9 +12,16 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ReactComponent as AppLogo } from '../assets/pupi_pay_logo.svg';
 import { NavLink } from "react-router-dom";
+import Dropdown from "./DropDown/dropdown";
 
 const Navbar = () => {
+  const pages = ['Products', 'Pricing', 'Blog', 'testing'];
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+
+  function handleUploadImage () {
+    return <Dropdown pages={pages}/>
+  };
+
   return (
     <>
       <nav className="main-nav">
@@ -30,7 +37,7 @@ const Navbar = () => {
           }>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink onClick={handleUploadImage} to='/'>Home</NavLink>
             </li>
             <li>
               <NavLink to="/explore">Explore</NavLink>

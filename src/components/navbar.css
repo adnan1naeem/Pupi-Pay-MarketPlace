@@ -158,6 +158,13 @@ li {
   }
 }
 
+.dropdown {
+  flex-direction: column;
+  margin-top:170px;
+  background: #c32aa3;
+  /* display: none; */
+ }
+
 /* responsive css style  */
 @media (max-width: 998px) {
   .main-nav {
