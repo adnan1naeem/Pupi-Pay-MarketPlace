@@ -119,6 +119,7 @@ li {
 .hero-section {
   height: 80vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -126,11 +127,13 @@ li {
 
 .hero-section p {
   font-size: 3rem;
+  flex-wrap: wrap;
   text-transform: capitalize;
 }
 
 .hero-section h1 {
   font-size: 5rem;
+  flex-wrap: wrap;
   text-transform: uppercase;
   text-align: center;
 }
@@ -167,7 +170,6 @@ li {
 
   .mobile-menu-link {
     grid-column: 2/4;
-    position: relative;
     z-index: 99;
   }
 
@@ -276,6 +278,7 @@ li {
   /* hero section  */
 
   .hero-section h1 {
+    flex-wrap: wrap;
     font-size: 3.8rem;
   }
 }

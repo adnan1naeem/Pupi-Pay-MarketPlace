@@ -35,11 +35,8 @@ const Home = () => {
   }] 
   return (
     <>
-      <Navbar />
-      <div style={{backgroundColor:'#F7F7FF'}}>
-        <section className='hero-section'>
-          <MyList items={itemList}/>
-        </section>
+      <div style={{backgroundColor:'#F7F7FF', overflow:'auto', width:'100%'}}>
+        <MyList items={itemList}/>
       </div>
     </>
   );
@@ -47,7 +44,7 @@ const Home = () => {
 
 function MyList({items}) {
   return (
-   <div style={{display: 'flex', flexDirection: 'row'}}>
+   <div style={{display: 'flex',justifyContent:'center', flexWrap:'wrap'}}>
     {items?.map((item) => <Item key={item.key} value={item} />)}
    </div>
  );
@@ -87,7 +84,6 @@ function Item({value}) {
 const Explore = () => {
   return (
     <>
-      <Navbar />
       <section className='hero-section'>
         <p>Welcome to </p>
         <h1>Explore Page</h1>
@@ -99,7 +95,6 @@ const Explore = () => {
 const Stats = () => {
   return (
     <>
-      <Navbar />
       <section className='hero-section'>
         <p>Welcome to </p>
         <h1>Stats Page</h1>
@@ -111,7 +106,6 @@ const Stats = () => {
 const Resources = () => {
   return (
     <>
-      <Navbar />
       <section className='hero-section'>
         <p>Welcome to </p>
         <h1>Resources Page</h1>
@@ -123,7 +117,6 @@ const Resources = () => {
 const Create = () => {
   return (
     <>
-      <Navbar />
       <section className='hero-section'>
         <p>Welcome to </p>
         <h1>Create Page</h1>
@@ -134,7 +127,8 @@ const Create = () => {
 
 const App = () => {
   return (
-    <div>
+    <div style={{display: 'flex', height:'100%', flexDirection: 'column', flexWrap:'wrap'}}>
+    <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/explore' element={<Explore />} />
